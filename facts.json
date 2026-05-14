@@ -1,0 +1,98 @@
+{
+  "place_id": "ChIJIakEnZ3nx4kRj07cMJhszyo",
+  "name": "CLARKS PLUMBING LLC",
+  "phone": "(443) 485-7336",
+  "phone_digits": "(443) 485-7336",
+  "address": "6 Whitburn Pl, Newark, DE 19702, USA",
+  "rating": "4.5",
+  "review_count": "261",
+  "hours": "Monday: Open 24 hours | Tuesday: Open 24 hours | Wednesday: Open 24 hours | Thursday: Open 24 hours | Friday: Open 24 hours",
+  "types": [
+    "plumber",
+    "service",
+    "point_of_interest",
+    "establishment"
+  ],
+  "confirmed_services": [
+    "drain cleaning",
+    "leak repair",
+    "water heater",
+    "toilet",
+    "emergency",
+    "fixture"
+  ],
+  "reviews": [
+    {
+      "stars": 5,
+      "author": "Seth The Brick",
+      "text": "It was almost trippy how fast he arrived, fixed my clog, and left. Brandon came no later than 15 minutes after I called them and got the job done for a reasonable price. I\u2019ll be coming to this company again for any of my plumbing needs."
+    },
+    {
+      "stars": 4,
+      "author": "Mina \u201cMINA\u201d",
+      "text": "Hello. I realised that your company has no website even tho the business seems to be going pretty good and i make websites if youre intersted. just email me on this account for more details"
+    },
+    {
+      "stars": 1,
+      "author": "Rachel MissLivin",
+      "text": "Had a sump pump installed March 2024. Then in January 2026 the pipe to the sump pump came apart. Seems the submersible sump pump dropped down some causing the separation. Has been hard to get in contact with this plumber. Was told twice he would come out and both times was a no show. I have called 6 times and also texted trying to get ahold of him and nothing. Buyer BEWARE! Not worth the headache later!!"
+    }
+  ],
+  "website_check": {
+    "places_api": null,
+    "exa_search": "exa_error: HTTP Error 402: Payment Required",
+    "domain_check": null
+  },
+  "valid_target": true,
+  "website_evidence": [],
+  "email": "clarksplumbing09@gmail.com",
+  "city": "Newark",
+  "state": "DE",
+  "zip": "19702",
+  "business_name": "Clarks Plumbing LLC",
+  "trade": "plumbing",
+  "schema_type": "Plumber",
+  "years_in_business": 5,
+  "railway_url": "",
+  "canonical_url": "",
+  "lat": 40.2,
+  "lng": -75.3,
+  "service_descriptions": {
+    "drain cleaning": "Professional drain cleaning to clear blockages and restore full water flow.",
+    "leak repair": "Fast leak detection and repair for pipes, fixtures, and connections throughout your home.",
+    "water heater": "Water heater installation, repair, and replacement for all brands and models.",
+    "toilet": "Toilet repair, replacement, and installation including running, clogged, or broken units.",
+    "emergency": "24/7 emergency plumbing response for burst pipes, major leaks, and urgent repairs.",
+    "fixture": "Faucet, sink, and fixture installation, repair, and upgrade services."
+  },
+  "faqs": [
+    {
+      "q": "How quickly can you respond to a plumbing emergency?",
+      "a": "We respond to emergency calls as fast as possible, often within the hour for urgent issues like burst pipes or major leaks."
+    },
+    {
+      "q": "Do you offer free estimates?",
+      "a": "Yes, we provide free estimates on most plumbing projects before any work begins."
+    },
+    {
+      "q": "Are you licensed and insured?",
+      "a": "Yes, we are fully licensed and insured in Pennsylvania, protecting you and your property throughout the job."
+    },
+    {
+      "q": "What payment methods do you accept?",
+      "a": "We accept cash, check, and major credit cards for your convenience."
+    },
+    {
+      "q": "Do you handle both residential and commercial plumbing?",
+      "a": "Yes, we work with both residential homeowners and commercial property owners."
+    }
+  ],
+  "stat1_value": "4.5\u2605",
+  "stat1_label": "Google Rating",
+  "stat2_value": "261+",
+  "stat2_label": "Customer Reviews",
+  "stat3_value": "Free",
+  "stat3_label": "Estimates",
+  "stat4_value": "Licensed",
+  "stat4_label": "& Insured"
+}

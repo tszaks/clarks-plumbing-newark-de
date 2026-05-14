@@ -1,0 +1,878 @@
+<!-- TEMPLATE: plumbing.html | Based on Bradley's Plumbing A++ design | Tokens: T3 Precision Navy -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newark Plumbing | CLARKS PLUMBING LLC | (443) 485-7336</title>
+  <meta name="description" content="CLARKS PLUMBING LLC in Newark, DE. Call (443) 485-7336.">
+  <meta name="robots" content="index, follow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Plumber",
+        "name": "CLARKS PLUMBING LLC",
+        "telephone": "(443) 485-7336",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "6 Whitburn Pl",
+          "addressLocality": "Newark",
+          "addressRegion": "DE",
+          "postalCode": "19702"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.5",
+          "reviewCount": "261"
+        },
+        "openingHours": "Mo-Fr 07:00-17:00",
+        "areaServed": [
+          {"@type": "City", "name": "Newark"},
+          {"@type": "City", "name": ""},
+          {"@type": "City", "name": ""},
+          {"@type": "City", "name": ""},
+          {"@type": "City", "name": ""},
+          {"@type": "City", "name": ""},
+          {"@type": "City", "name": ""},
+          {"@type": "City", "name": ""}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How quickly can you respond to a plumbing emergency?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We respond to emergency calls as fast as possible, often within the hour for urgent issues like burst pipes or major leaks."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer free estimates?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we provide free estimates on most plumbing projects before any work begins."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are you licensed and insured?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we are fully licensed and insured in Pennsylvania, protecting you and your property throughout the job."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What payment methods do you accept?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We accept cash, check, and major credit cards for your convenience."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --white: #FFFFFF;
+      --navy: #1B3A6B;
+      --blue: #2563EB;
+      --blue-light: #EFF6FF;
+      --sky: #F0F7FF;
+      --muted: #64748B;
+      --border: #E2E8F0;
+      --accent: #0EA5E9;
+      --text: #1E293B;
+      --radius: 10px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 0 24px;
+      transition: background 0.25s, box-shadow 0.25s;
+    }
+    nav.scrolled {
+      background: var(--white);
+      box-shadow: 0 1px 8px rgba(0,0,0,0.08);
+    }
+    .nav-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+    .nav-logo {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.2rem;
+      color: var(--white);
+      text-decoration: none;
+      transition: color 0.25s;
+    }
+    nav.scrolled .nav-logo { color: var(--navy); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.9);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    nav.scrolled .nav-links a { color: var(--text); }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta {
+      background: var(--navy);
+      color: var(--white) !important;
+      padding: 9px 20px;
+      border-radius: 6px;
+      font-weight: 600 !important;
+      font-size: 0.88rem !important;
+      transition: background 0.2s !important;
+      white-space: nowrap;
+    }
+    nav.scrolled .nav-cta { background: var(--navy); }
+    .nav-cta:hover { background: #142d55 !important; color: var(--white) !important; }
+    @media (max-width: 680px) {
+      .nav-links li:not(:last-child) { display: none; }
+    }
+
+    /* ── HERO ── */
+    .hero{
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      background-image:
+        linear-gradient(rgba(10,40,80,0.82), rgba(10,40,80,0.88)),
+        url('/photos/plumbing-tools-flatlay-dark.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 100px 24px 64px;
+
+  color: #FFFFFF;}
+    .hero-inner  {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+      color: var(--white);
+    }
+    .hero-badge  {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 40px;
+      padding: 6px 16px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      margin-bottom: 24px;
+      color: rgba(255,255,255,0.92);
+    }
+    .hero h1  {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(2.4rem, 6vw, 3.8rem);
+      line-height: 1.15;
+      margin-bottom: 18px;
+      color: var(--white);
+    }
+    .hero-sub  {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.82);
+      margin-bottom: 32px;
+      line-height: 1.65;
+      max-width: 540px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero-rating  {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 36px;
+    }
+    .stars { color: #FBBF24; font-size: 1.1rem; letter-spacing: 2px; }
+    .rating-text { font-size: 0.9rem; color: rgba(255,255,255,0.8); }
+    .hero-actions  {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+    }
+    .btn-primary {
+      background: var(--blue);
+      color: var(--white);
+      padding: 16px 32px;
+      border-radius: 8px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.2s, transform 0.15s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-primary:hover { background: #1d4ed8; transform: translateY(-1px); }
+    .btn-ghost {
+      background: transparent;
+      color: var(--white);
+      padding: 16px 28px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 500;
+      text-decoration: none;
+      border: 1.5px solid rgba(255,255,255,0.4);
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-ghost:hover { border-color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.06); }
+
+    /* ── TRUST BAR ── */
+    .trust-bar {
+      background: var(--blue-light);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 24px;
+    }
+    .trust-bar-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .trust-stat {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+    }
+    .trust-stat strong {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .trust-stat span {
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 500;
+    }
+
+    /* ── SECTIONS ── */
+    section { padding: 72px 24px; }
+    .section-inner { max-width: 1140px; margin: 0 auto; }
+    .section-header { text-align: center; margin-bottom: 48px; }
+    .section-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+      display: block;
+    }
+    .section-title {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .section-sub {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* ── SERVICES ── */
+    .services-section { background: var(--sky); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-left: 3px solid transparent;
+      border-radius: var(--radius);
+      padding: 28px 26px;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+    }
+    .service-card:hover {
+      border-left-color: var(--navy);
+      box-shadow: 0 4px 18px rgba(27,58,107,0.08);
+      transform: translateY(-2px);
+    }
+    .service-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--sky);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 14px;
+    }
+    .service-card h3 {
+      font-size: 1.02rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .service-card p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ── REVIEWS ── */
+    .reviews-section { background: var(--white); }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .review-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      transition: box-shadow 0.2s;
+    }
+    .review-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.07); }
+    .review-stars { color: #FBBF24; font-size: 0.95rem; letter-spacing: 2px; margin-bottom: 14px; }
+    .review-quote {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--text);
+      line-height: 1.65;
+      margin-bottom: 18px;
+    }
+    .review-author {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .review-source {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    /* ── CTA SECTION ── */
+    .cta-section {
+      background: var(--navy);
+      padding: 72px 24px;
+      text-align: center;
+    }
+    .cta-section h2 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      color: var(--white);
+      margin-bottom: 14px;
+    }
+    .cta-section p {
+      color: rgba(255,255,255,0.75);
+      font-size: 1rem;
+      margin-bottom: 32px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-section .btn-primary { font-size: 1.1rem; padding: 18px 38px; }
+
+    /* ── FAQ ── */
+    .faq-section { background: var(--white); }
+    .faq-list { max-width: 760px; margin: 0 auto; }
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      padding: 22px 0;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--navy);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      transition: color 0.2s;
+    }
+    .faq-question:hover { color: var(--blue); }
+    .faq-chevron {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      background: var(--blue-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      color: var(--blue);
+      transition: transform 0.2s;
+    }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+    .faq-answer {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.7;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 200px;
+      padding-bottom: 20px;
+    }
+
+    /* ── CONTACT + MAP ── */
+    .contact-section { background: var(--sky); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    @media (max-width: 480px) { .form-row { grid-template-columns: 1fr; } }
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .form-field label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: 0.02em;
+    }
+    .form-field input,
+    .form-field textarea,
+    .form-field select {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 11px 14px;
+      font-size: 0.92rem;
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      transition: border-color 0.2s;
+      outline: none;
+    }
+    .form-field input:focus,
+    .form-field textarea:focus,
+    .form-field select:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+    }
+    .form-field textarea { resize: vertical; min-height: 110px; }
+    .form-submit {
+      background: var(--blue);
+      color: var(--white);
+      border: none;
+      border-radius: 8px;
+      padding: 14px 24px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: background 0.2s;
+      text-align: center;
+    }
+    .form-submit:hover { background: #1d4ed8; }
+    .map-container { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
+    .map-container iframe { width: 100%; height: 380px; border: 0; display: block; }
+    .contact-info { margin-top: 20px; display: flex; flex-direction: column; gap: 10px; }
+    .contact-info-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+    .contact-info-row .icon { color: var(--accent); font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #0F1F40;
+      color: rgba(255,255,255,0.65);
+      padding: 36px 24px 24px;
+      text-align: center;
+      font-size: 0.82rem;
+    }
+    footer a { color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+    footer a:hover { color: var(--accent); }
+    .footer-inner { max-width: 1140px; margin: 0 auto; }
+    .footer-name {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 8px;
+    }
+    .footer-divider { border: none; border-top: 1px solid rgba(255,255,255,0.1); margin: 20px 0; }
+    .claim-bar {
+      margin-top: 12px;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.3);
+    }
+    .claim-bar a { color: rgba(255,255,255,0.4); text-decoration: underline; }
+
+    /* ── FLOATING CTA ── */
+    .float-cta {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 200;
+      background: var(--navy);
+      color: var(--white);
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(27,58,107,0.35);
+      transition: opacity 0.3s, transform 0.3s;
+      opacity: 0;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+    .float-cta.visible { opacity: 1; pointer-events: all; }
+    @media (max-width: 640px) { .float-cta { display: flex; align-items: center; gap: 8px; } }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="mainNav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">CLARKS Plumbing</a>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="tel:4434857336" class="nav-cta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 13 19.79 19.79 0 011.61 4.34 2 2 0 013.6 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 9.91a16 16 0 006 6l.92-.92a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 17z"/></svg> (443) 485-7336</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-badge"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Newark, DE · Monday: Open 24 hours</div>
+      <h1>Newark's Trusted<br>CLARKS PLUMBING LLC</h1>
+      <p class="hero-sub">4.5★ rated · 261 reviews · Serving Newark, DE</p>
+      <div class="hero-rating">
+        <span class="stars">★★★★★</span>
+        <span class="rating-text">4.5 stars · 261 Google Reviews</span>
+      </div>
+      <div class="hero-actions">
+        <a href="tel:4434857336" class="btn-primary"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 13 19.79 19.79 0 011.61 4.34 2 2 0 013.6 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 9.91a16 16 0 006 6l.92-.92a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 17z"/></svg> Call (443) 485-7336</a>
+        <a href="#contact" class="btn-ghost">Request a Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-bar-inner">
+      <div class="trust-stat">
+        <strong>4.5★</strong>
+        <span>Google Rating</span>
+      </div>
+      <div class="trust-stat">
+        <strong>261+</strong>
+        <span>Customer Reviews</span>
+      </div>
+      <div class="trust-stat">
+        <strong>Free</strong>
+        <span>Estimates</span>
+      </div>
+      <div class="trust-stat">
+        <strong>Licensed</strong>
+        <span>& Insured</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="services-section" id="services">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-label">What We Do</span>
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-sub">Professional service in Newark and surrounding areas</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
+          <h3>drain cleaning</h3>
+          <p>Professional drain cleaning to clear blockages and restore full water flow.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 01-7 7 7 7 0 01-7-7c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg></div>
+          <h3>leak repair</h3>
+          <p>Fast leak detection and repair for pipes, fixtures, and connections throughout your home.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg></div>
+          <h3>water heater</h3>
+          <p>Water heater installation, repair, and replacement for all brands and models.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+          <h3>toilet</h3>
+          <p>Toilet repair, replacement, and installation including running, clogged, or broken units.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <h3>emergency</h3>
+          <p>24/7 emergency plumbing response for burst pipes, major leaks, and urgent repairs.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+          <h3>fixture</h3>
+          <p>Faucet, sink, and fixture installation, repair, and upgrade services.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews-section" id="reviews">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-label">Customer Reviews</span>
+        <h2 class="section-title">What Customers Say</h2>
+        <p class="section-sub">Real reviews from Newark area homeowners</p>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote">"It was almost trippy how fast he arrived, fixed my clog, and left. Brandon came no later than 15 minutes after I called them and got the job done for a reasonable price. I’ll be coming to this company again for any of my plumbing needs."</p>
+          <div class="review-author">Seth The Brick</div>
+          <div class="review-source">Google Review · Newark, DE</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote">"Hello. I realised that your company has no website even tho the business seems to be going pretty good and i make websites if youre intersted. just email me on this account for more details"</p>
+          <div class="review-author">Mina “MINA”</div>
+          <div class="review-source">Google Review · Newark, DE</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote">"Had a sump pump installed March 2024. Then in January 2026 the pipe to the sump pump came apart. Seems the submersible sump pump dropped down some causing the separation. Has been hard to get in contact with this plumber. Was told twice he would come out and both times was a no show. I have called 6 times and also texted trying to get ahold of him and nothing. Buyer BEWARE! Not worth the headache later!!"</p>
+          <div class="review-author">Rachel MissLivin</div>
+          <div class="review-source">Google Review · Newark, DE</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-section">
+    <div class="section-inner">
+      <h2>Ready to Call CLARKS?</h2>
+      <p>Serving Newark, DE and surrounding areas.</p>
+      <a href="tel:4434857336" class="btn-primary" style="font-size:1.1rem;padding:18px 38px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 13 19.79 19.79 0 011.61 4.34 2 2 0 013.6 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 9.91a16 16 0 006 6l.92-.92a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 17z"/></svg> Call (443) 485-7336</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section" id="faq">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-label">FAQ</span>
+        <h2 class="section-title">Common Questions About CLARKS</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How quickly can you respond to a plumbing emergency?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">We respond to emergency calls as fast as possible, often within the hour for urgent issues like burst pipes or major leaks.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Do you offer free estimates?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">Yes, we provide free estimates on most plumbing projects before any work begins.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Are you licensed and insured?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">Yes, we are fully licensed and insured in Pennsylvania, protecting you and your property throughout the job.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What payment methods do you accept?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">We accept cash, check, and major credit cards for your convenience.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-label">Get in Touch</span>
+        <h2 class="section-title">Request a Quote</h2>
+        <p class="section-sub">Fill out the form and we'll get back to you quickly. Or just call.</p>
+      </div>
+      <div class="contact-grid">
+        <form class="contact-form" action="https://formspree.io/f/" method="POST">
+          <div class="form-row">
+            <div class="form-field">
+              <label>First Name</label>
+              <input type="text" name="first_name" placeholder="Jane" required>
+            </div>
+            <div class="form-field">
+              <label>Last Name</label>
+              <input type="text" name="last_name" placeholder="Smith">
+            </div>
+          </div>
+          <div class="form-field">
+            <label>Phone Number</label>
+            <input type="tel" name="phone" placeholder="(610) 555-0100" required>
+          </div>
+          <div class="form-field">
+            <label>Service Needed</label>
+            <select name="service">
+              <option value="">Select a service...</option>
+              <option>drain cleaning</option>
+              <option>leak repair</option>
+              <option>water heater</option>
+              <option>toilet</option>
+              <option>emergency</option>
+              <option>fixture</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label>Message</label>
+            <textarea name="message" placeholder="Describe the issue briefly..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Request →</button>
+        </form>
+        <div>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d-75.3!3d40.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6c2a!2s6+Whitburn+Pl%2C+Newark%2C+DE+19702%2C+USA!5e0!3m2!1sen!2sus!4v1"
+              allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="CLARKS PLUMBING LLC location in Newark DE">
+            </iframe>
+          </div>
+          <div class="contact-info">
+            <div class="contact-info-row"><span class="icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>6 Whitburn Pl, Newark, DE 19702</span></div>
+            <div class="contact-info-row"><span class="icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 13 19.79 19.79 0 011.61 4.34 2 2 0 013.6 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 9.91a16 16 0 006 6l.92-.92a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 17z"/></svg></span><span><a href="tel:4434857336" style="color:var(--navy);font-weight:600;">(443) 485-7336</a></span></div>
+            <div class="contact-info-row"><span class="icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><span>Monday: Open 24 hours</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-name">CLARKS PLUMBING LLC</div>
+      <p>6 Whitburn Pl, Newark, DE 19702 · <a href="tel:4434857336">(443) 485-7336</a></p>
+      <p style="margin-top:6px;">Serving Newark</p>
+      <hr class="footer-divider">
+      <p>© 2026 CLARKS PLUMBING LLC. All rights reserved.</p>
+      <div class="claim-bar">
+        Demo site · <a href="mailto:tyler@szakacsmedia.com?subject=CLARKS PLUMBING LLC -- Claim This Site&body=Hi Tyler,%0A%0AI'd like to claim the site you built for CLARKS PLUMBING LLC.%0A%0ASite: %0A%0AMy name: %0ABest number to reach me: ">Claim This Site</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING CTA (mobile) -->
+  <a href="tel:4434857336" class="float-cta" id="floatCta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 13 19.79 19.79 0 011.61 4.34 2 2 0 013.6 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 9.91a16 16 0 006 6l.92-.92a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 17z"/></svg> Call Now · Same Day Service</a>
+
+  <script>
+    // Nav scroll behavior
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // Floating CTA visibility
+    const floatCta = document.getElementById('floatCta');
+    window.addEventListener('scroll', () => {
+      floatCta.classList.toggle('visible', window.scrollY > 300);
+    });
+
+    // FAQ accordion
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+  </script>
+</body>
+</html>
